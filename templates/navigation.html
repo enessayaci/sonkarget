@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Quick start. Showing an interactive map on a page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+ 
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [37.8670, 32.4932],
+                zoom: 18
+        });
+ 
+        myPlacemark = new ymaps.Placemark([37.8670, 32.4932], { hintContent: 'İcon başlığı', balloonContent: 'Kutu içeriği'
+            });
+             
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <button onclick="history.back();" class="geridon w3-button w3-xlarge w3-green" type="button" name="action" value="cikis_yap">Geridön</button>
+        
+                <style>
+                        .geridon {
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                        }
+                    </style>
+</head>
+ 
+<body>
+    <div class=harita id="map" style=" width: 1360px; height: 550px"></div>
+</body>
+<style>
+        .harita {
+            position: absolute;
+            left: 0px;
+            top: 70px;
+        }
+    </style>
+ 
+</html>

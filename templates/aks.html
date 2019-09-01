@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>Karget AKS</title>
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="‘description" content="‘A" solutions="" focused="" management="" consultancy="" for="" organizations="" navigating="" disruption="" or="" growth.="" |="" (m)="" +91="" 99="" 206="" 10="" 736="" (e)="" leadwithchange@bullmonk.com="" ’="">
+
+    <meta property="‘og:description’" content="‘A" solutions="" focused="" management="" consultancy="" for="" organizations="" navigating="" disruption="" or="" growth.="" |="" (m)="" +91="" 99="" 206="" 10="" 736="" (e)="" leadwithchange@bullmonk.com’="">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='./bootstrap.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='./animate.css') }}">
+    <!-- link for favicon -->
+    <link rel="icon" type="image/png" href="https://amazingandcurious.com/wp-content/uploads/2018/03/cropped-bulb-favicon-2.png"> 
+   
+		<div class="baslik"><h4 class="change_head">--AKS--</h4></div>
+			<style>
+			 .baslik{
+			  position: absolute;
+			  left: 500px;
+			  top:  0px;
+			}
+			</style>   
+
+<style>
+		body {
+		  background: rgb(0, 0, 0) !important;;
+		}
+		</style>
+
+
+
+<div class="url_len"> <font color="orange" face="monospace"> Hoş Geldiniz; {{user}}</font></div>
+			<style>
+				.url_len {
+					position: absolute;
+					left: 1050px;
+					top: 40px;
+				}
+			</style>
+<form action="/navi" method="post">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<button class="buton1 w3-button w3-xlarge w3-green" type="submit" name="action" value="cikis_yap">Çıkış Yap</button>
+
+<button class="buton3 w3-button w3-xlarge w3-green" type="submit" name="action" value="navi">Arabam Nerede?</button>
+<button class="buton4 w3-button w3-xlarge w3-green" type="submit" name="action" value="cikis_yap">Kayıtları indir</button>
+</form>	
+<form action="/message" method="post">
+<button class="buton2 w3-button w3-xlarge w3-green" type="submit" name="actions" value="message">Mesaj Gönder</button>
+</form>
+	
+	
+	<style>
+			.buton1 {
+				position: absolute;
+				left: 1080px;
+				top: 70px;
+			}
+		</style>
+			<style>
+					.buton2 {
+						position: absolute;
+						left: 880px;
+						top: 70px;
+					}
+				</style>
+					<style>
+							.buton3 {
+								position: absolute;
+								left: 190px;
+								top: 70px;
+							}
+						</style>
+											<style>
+													.buton4 {
+														position: absolute;
+														left: 0px;
+														top: 70px;
+													}
+												</style>
+						
+
+
+
+</head>   
+   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LEE Gauge Test</title>
+<script src="static/gauge.min.js"></script>
+<script type="text/javascript" src="static/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="static/socket.io-1.3.5.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  var mycount = 1;
+  var myData = {};
+  var testc = 1;
+  $(document).ready(function() {
+  namespace = '/carpi';
+	  var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);    
+	  socket.on('connect', function() {
+		   socket.emit('my_event', {data: 'I\'m connected!'});
+	  });
+	  socket.on('my_response', function(msg) {
+		  $('#values').html(msg.count)
+  $('#log').append('<br>' + $('<div/>').text('Received #' + msg.data + ': ' + msg.count).html())
+  var elec = msg.elec
+  var external = msg.ext
+  var frontroom = msg.fr
+  var kitchen = msg.kt
+  var bedroom = msg.bd
+  var hizim =msg.hiz
+  var rpm = msg.rpm
+  var vites = msg.vites
+  var sicak1 = msg.sicak1
+  var sicak2 = msg.sicak2
+  var sicak3 = msg.sicak3
+  var sicak4 = msg.sicak4
+
+  extGauge.value = external
+  frontroomGauge.value = frontroom
+  kitchenGauge.value = kitchen
+  bedroomGauge.value = bedroom
+  elecGauge.value = elec
+  speedgauge.value = hizim
+  sicaklik1.value = sicak1
+  sicaklik2.value = sicak2
+  sicaklik3.value = sicak3
+  sicaklik4.value = sicak4
+		});
+   });
+</script>
+	<style>
+			.hiz{
+			 position: absolute;
+			 left: 410px;
+			 top: 140px;
+		   }
+		   </style>  
+	<style>
+			.batarya1{
+			 position: absolute;
+			 left: 80px;
+			 top: 170px;
+		   }
+		   </style>
+		<style>
+				.batarya2{
+				 position: absolute;
+				 left: 1000px;
+				 top: 170px;
+			   }
+			   </style>  
+			   	<style>
+						.batarya3{
+						 position: absolute;
+						 left: 80px;
+						 top: 430px;
+					   }
+					   </style>  
+					   	<style>
+								.batarya4{
+								 position: absolute;
+								 left: 1000px;
+								 top: 430px;
+							   }
+							   </style>    
+	<style>
+			.derece1{
+			 position: absolute;
+			 left: 550px;
+			 top: 450px;
+		   }
+		   </style>
+		<style>
+				.derece2{
+				 position: absolute;
+				 left: 80px;
+				 top: 350px;
+			   }
+			   </style>  
+			   	<style>
+						.derece3{
+						 position: absolute;
+						 left: 1000px;
+						 top: 350px;
+					   }
+					   </style>  
+					   	<style>
+								.derece4{
+								 position: absolute;
+								 left: 80px;
+								 top: 620px;
+							   }
+							   </style>  
+							   					   	<style>
+								.derece5{
+								 position: absolute;
+								 left: 1000px;
+								 top: 620px;
+							   }
+							   </style>  
+
+	   
+</head>
+
+<body>
+
+
+<canvas class=hiz id="speed-gauge">  </canvas>
+<script>
+  var speedgauge = new RadialGauge({
+  renderTo: "speed-gauge",
+  width: 500,
+  height: 500,
+
+  minValue: 0,
+  maxValue: 100,
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+
+  minorTicks: 5,
+  strokeTicks: true,
+  highlights: [
+  { from: 0, to: 10, color: 'rgba(25,0, 168, .8)'},
+  { from: 10, to: 30, color: 'rgba(0, 204, 61, .8)'},
+   { from: 30, to: 50, color: '  rgb(255,255,51, .8'},
+  { from: 50, to: 70, color: 'rgba(255, 127, 0, .8)'},
+  { from: 70, to: 100, color: 'rgba(255, 0, 0, .8)'}
+  ],
+colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+colorPlate: "#000",
+colorValueText:"#fff",
+colorNumbers:"#fff",
+borderShadowWidth: 0,
+borders: false,
+needleType: "arrow",
+needleWidth: 3,
+needleCircleSize: 10,
+needleCircleOuter: true,
+needleCircleInner: false,
+animationDuration: 1500,
+animationRule: "linear"
+})
+  speedgauge.draw();
+</script>
+
+
+
+
+
+
+
+
+
+
+</p>
+<!-- external temp -->
+
+
+<canvas class=batarya1 id="external-temp">  </canvas>
+<script>
+  var extGauge = new RadialGauge({
+  renderTo: 'external-temp',
+  width: 200,
+  height: 200,
+  units: "Volt",
+  minValue: 0,
+  maxValue: 100,
+  colorNumbers:"#fff",
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+  minorTicks: 5,
+  strokeTicks: true,
+  highlights: [
+  { from: 0, to: 10, color: 'rgba(25,0, 168, .8)'},
+  { from: 10, to: 30, color: 'rgba(0, 204, 61, .8)'},
+   { from: 30, to: 50, color: '  rgb(255,255,51, .8'},
+  { from: 50, to: 70, color: 'rgba(247, 151, 7, .5)'},
+  { from: 70, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],
+colorPlate: "#000",
+borderShadowWidth: 0,
+borders: false,
+needleType: "arrow",
+needleWidth: 3,
+needleCircleSize: 10,
+needleCircleOuter: true,
+needleCircleInner: false,
+animationDuration: 1500,
+animationRule: "linear"
+})
+  extGauge.draw();
+</script>
+
+<!-- frontroom -->
+<canvas class=batarya2 id="frontroom-temp">  </canvas>
+<script>
+  var frontroomGauge = new RadialGauge({
+  renderTo: 'frontroom-temp',
+  width: 200,
+  height: 200,
+  units: "Volt",
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  minValue: 0,
+  maxValue: 100,
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+  minorTicks: 5,
+  strokeTicks: true,
+  highlights: [
+  { from: 0, to: 10, color: 'rgba(25,0, 168, .8)'},
+  { from: 10, to: 30, color: 'rgba(0, 204, 61, .8)'},
+   { from: 30, to: 50, color: '  rgb(255,255,51, .8'},
+  { from: 50, to: 70, color: 'rgba(247, 151, 7, .5)'},
+  { from: 70, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],
+colorPlate: "#000",
+colorNumbers:"#fff",
+borderShadowWidth: 0,
+borders: false,
+needleType: "arrow",
+needleWidth: 3,
+needleCircleSize: 10,
+needleCircleOuter: true,
+needleCircleInner: false,
+animationDuration: 1500,
+animationRule: "linear"
+})
+  frontroomGauge.draw();
+</script>
+
+<!-- kitchen -->
+<canvas class=batarya3 id="kitchen-temp">  </canvas>
+<script>
+  var kitchenGauge = new RadialGauge({
+  renderTo: 'kitchen-temp',
+  width: 200,
+  height: 200,
+  units: "Volt",
+  colorNumbers:"#fff",
+  minValue: 0,
+  maxValue: 100,
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+  minorTicks: 5,
+  strokeTicks: true,
+    highlights: [
+  { from: 0, to: 10, color: 'rgba(25,0, 168, .8)'},
+  { from: 10, to: 30, color: 'rgba(0, 204, 61, .8)'},
+   { from: 30, to: 50, color: '  rgb(255,255,51, .8'},
+  { from: 50, to: 70, color: 'rgba(247, 151, 7, .5)'},
+  { from: 70, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],
+colorPlate: "#000",
+borderShadowWidth: 0,
+borders: false,
+needleType: "arrow",
+needleWidth: 3,
+needleCircleSize: 10,
+needleCircleOuter: true,
+needleCircleInner: false,
+animationDuration: 1500,
+animationRule: "linear"
+})
+  kitchenGauge.draw();
+</script>
+
+
+<!-- frontroom -->
+<canvas class=batarya4 id="bedroom-temp">  </canvas>
+<script>
+  var bedroomGauge = new RadialGauge({
+  renderTo: 'bedroom-temp',
+  width: 200,
+  height: 200,
+  units: "Volt",
+  minValue: 0,
+  colorNumbers:"#fff",
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  maxValue: 100,
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+  minorTicks: 5,
+  strokeTicks: true,
+  highlights: [
+  { from: 0, to: 10, color: 'rgba(25,0, 168, .8)'},
+  { from: 10, to: 30, color: 'rgba(0, 204, 61, .8)'},
+   { from: 30, to: 50, color: '  rgb(255,255,51, .8'},
+  { from: 50, to: 70, color: 'rgba(247, 151, 7, .5)'},
+  { from: 70, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],
+colorPlate: "#000",
+borderShadowWidth: 0,
+borders: false,
+needleType: "arrow",
+needleWidth: 3,
+needleCircleSize: 10,
+needleCircleOuter: true,
+needleCircleInner: false,
+animationDuration: 1500,
+animationRule: "linear"
+})
+  bedroomGauge.draw();
+</script>
+
+
+<!-- electricity meter -->
+
+<br>
+<canvas class=derece1 id='electricity'></canvas>
+<script>
+  var elecGauge = new LinearGauge({
+  renderTo: 'electricity',
+  width: 200,
+  height: 80,
+  minValue: 0,
+  maxValue: 100,
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+minorTicks: 0,
+strokeTicks: false,
+colorPlate: "#000",
+colorNumbers:"#000",
+borderShadowWidth: 0,
+borders: false,
+barBeginCircle: false,
+tickSide: "left",
+numberSide: "left",
+needleSide: "left",
+needleType: "line",
+needleWidth: 0,
+  colorNeedle: "#fff",
+  barWidth: "30",
+  colorBar: "#fff",
+  colorBarStroke: "#03bc2e",
+  colorBarProgress: "#228B22",
+  animationDuration: 1500,
+  animationRule: "linear",
+  animationTarget: "plate",   
+    highlights: [
+ 
+  { from: 70, to: 100, color: 'rgba(0, 204, 61, .8)'},
+   { from: 20, to: 70, color: '  rgb(255,255,51, .8'},
+  
+  { from: 0, to: 20, color: 'rgba(247, 31, 7, .5)'}
+  ],   
+
+})
+  elecGauge.draw();
+</script>  
+ 
+<br>
+<canvas class=derece2 id='sicaklik-1'></canvas>
+<script>
+  var sicaklik1 = new LinearGauge({
+  renderTo: 'sicaklik-1',
+  width: 200,
+  height: 80,
+  minValue: 0,
+  maxValue: 100,
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+minorTicks: 0,
+strokeTicks: false,
+colorPlate: "#000",
+colorNumbers:"#fff",
+borderShadowWidth: 0,
+borders: false,
+barBeginCircle: false,
+tickSide: "left",
+numberSide: "left",
+needleSide: "left",
+needleType: "line",
+needleWidth: 5,
+  colorNeedle: "#fff",
+  barWidth: "4",
+  colorBar: "#000",
+  colorBarStroke: "#03bc2e",
+  colorBarProgress: "#ff0000",
+  animationDuration: 1500,
+  animationRule: "linear",
+  animationTarget: "plate",   
+    highlights: [
+ { from: 0, to: 20, color: 'rgba(25,0, 168, .8)'},
+  { from: 20, to: 40, color: 'rgba(0, 204, 61, .8)'},
+   { from: 40, to: 60, color: '  rgb(255,255,51, .8'},
+  { from: 60, to: 80, color: 'rgba(255, 127, 0, .8)'},
+  { from: 80, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],   
+
+})
+  sicaklik1.draw();
+</script>    
+</script>  
+ 
+<br>
+<canvas class=derece3 id='sicaklik-2'></canvas>
+<script>
+  var sicaklik2 = new LinearGauge({
+  renderTo: 'sicaklik-2',
+  width: 200,
+  height: 80,
+  minValue: 0,
+  maxValue: 100,
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+minorTicks: 0,
+strokeTicks: false,
+colorPlate: "#000",
+colorNumbers:"#fff",
+borderShadowWidth: 0,
+borders: false,
+barBeginCircle: false,
+tickSide: "left",
+numberSide: "left",
+needleSide: "left",
+needleType: "line",
+needleWidth: 5,
+  colorNeedle: "#fff",
+  barWidth: "4",
+  colorBar: "#000",
+  colorBarStroke: "#03bc2e",
+  colorBarProgress: "#ff0000",
+  animationDuration: 1500,
+  animationRule: "linear",
+  animationTarget: "plate",   
+    highlights: [
+ { from: 0, to: 20, color: 'rgba(25,0, 168, .8)'},
+  { from: 20, to: 40, color: 'rgba(0, 204, 61, .8)'},
+   { from: 40, to: 60, color: '  rgb(255,255,51, .8'},
+  { from: 60, to: 80, color: 'rgba(255, 127, 0, .8)'},
+  { from: 80, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],    
+
+})
+  sicaklik2.draw();
+</script>    
+</script>  
+ 
+<br>
+<canvas class=derece4 id='sicaklik-3'></canvas>
+<script>
+  var sicaklik3 = new LinearGauge({
+  renderTo: 'sicaklik-3',
+  width: 200,
+  height: 80,
+  minValue: 0,
+  maxValue: 100,
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+minorTicks: 0,
+strokeTicks: false,
+colorPlate: "#000",
+colorNumbers:"#fff",
+borderShadowWidth: 0,
+borders: false,
+barBeginCircle: false,
+tickSide: "left",
+numberSide: "left",
+needleSide: "left",
+needleType: "line",
+needleWidth: 5,
+  colorNeedle: "#fff",
+  barWidth: "4",
+  colorBar: "#000",
+  colorBarStroke: "#03bc2e",
+  colorBarProgress: "#ff0000",
+  animationDuration: 1500,
+  animationRule: "linear",
+  animationTarget: "plate",   
+    highlights: [
+ { from: 0, to: 20, color: 'rgba(25,0, 168, .8)'},
+  { from: 20, to: 40, color: 'rgba(0, 204, 61, .8)'},
+   { from: 40, to: 60, color: '  rgb(255,255,51, .8'},
+  { from: 60, to: 80, color: 'rgba(255, 127, 0, .8)'},
+  { from: 80, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],  
+
+})
+  sicaklik3.draw();
+</script>    
+</script>  
+ 
+<br>
+<canvas class=derece5 id='sicaklik-4'></canvas>
+<script>
+  var sicaklik4 = new LinearGauge({
+  renderTo: 'sicaklik-4',
+  width: 200,
+  height: 80,
+  minValue: 0,
+  maxValue: 100,
+  colorMajorTicks:"#000",
+colorMinorTicks:"#000",
+  majorTicks: [
+	  "0",
+	  "10",
+	  "20",
+	  "30",
+	  "40",
+	  "50",
+	  "60",
+	  "70",
+	  "80",
+	  "90",
+	  "100"
+  ],
+minorTicks: 0,
+strokeTicks: false,
+colorPlate: "#000",
+colorNumbers:"#fff",
+borderShadowWidth: 0,
+borders: false,
+barBeginCircle: false,
+tickSide: "left",
+numberSide: "left",
+needleSide: "left",
+needleType: "line",
+needleWidth: 5,
+  colorNeedle: "#fff",
+  barWidth: "4",
+  colorBar: "#000",
+  colorBarStroke: "#03bc2e",
+  colorBarProgress: "#ff0000",
+  animationDuration: 1500,
+  animationRule: "linear",
+  animationTarget: "plate",   
+    highlights: [
+ { from: 0, to: 20, color: 'rgba(25,0, 168, .8)'},
+  { from: 20, to: 40, color: 'rgba(0, 204, 61, .8)'},
+   { from: 40, to: 60, color: '  rgb(255,255,51, .8'},
+  { from: 60, to: 80, color: 'rgba(255, 127, 0, .8)'},
+  { from: 80, to: 100, color: 'rgba(247, 31, 7, .5)'}
+  ],  
+
+})
+  sicaklik4.draw();
+</script>    
+</head>
+
+
+
+<body>
+<p><b class="sicakligim1"> Sıcaklık 1=</b></p>
+			<style>
+				.sicakligim1 {
+					position: absolute;
+					left: 20px;
+					top: 380px;
+				}
+			</style>
+<p><b class="sicakligim2" >Sıcaklık 2=</b></p>
+			<style>
+				.sicakligim2{
+					position: absolute;
+					left: 950px;
+					top: 380px;
+				}
+			</style>
+<p><b class="sicakligim3">Sıcaklık 3=</b></p>
+			<style>
+				.sicakligim3 {
+					position: absolute;
+					left: 20px;
+					top: 650px;
+				}
+			</style>
+<p><b class="sicakligim4">Sıcaklık 4=</b></p>
+			<style>
+				.sicakligim4 {
+					position: absolute;
+					left: 950px;
+					top: 650px;
+				}
+			</style>
+<p><b class="Bataryam">= Batarya =</b></p>
+			<style>
+				.Bataryam {
+					position: absolute;
+					left: 615px;
+					top: 450px;
+				}
+			</style>
+
+
+
+<h4>
+
+<table class="tablom2" border="1">
+
+
+
+</table>
+
+
+
+			<style>
+				.tablom2 {
+					position: absolute;
+					left: 1000px;
+					top: 180px;
+				}
+			</style>
+
+
+ <style type="text/css">* {cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1054.cur), auto !important;}</style><a href="http://www.cursors-4u.com/cursor/2012/02/12/chrome-pointer.html" target="_blank" title="Chrome Pointer"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Chrome Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>   
+
+</body>
+</html>
