@@ -143,8 +143,8 @@ if __name__ == '__main__':
     except ValueError:
         PORT = 80
     #Sinif().sinif()
-    app.run(HOST, PORT)
-#    socketio.run(app, debug=True)
+    #app.run(HOST, PORT)
+    socketio.run(app, debug=True)
 
 
 ##################################################################################################################
