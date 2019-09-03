@@ -23,7 +23,7 @@ def get_vendors():
     
         while row is not None:
             data.append(row)
-            print(row)
+#            print(row)
             row = cur.fetchone()
             son=data.pop() 
             son_degerler=list(son)
