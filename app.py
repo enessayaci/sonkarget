@@ -17,7 +17,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 import requests		
 from random import randint
-
+from vericekici import Utku
 async_mode = None
 socketio = SocketIO(app, async_mode=async_mode)
 thread = None
@@ -25,6 +25,7 @@ def background_thread():
     """Example of how to send server generated events to clients."""
     ext=fr=kt=bd=elec=0
     while True:
+        
         socketio.sleep(2)
         ext = randint(0,100)
         fr = randint(0,100)
@@ -34,10 +35,7 @@ def background_thread():
         hiz = randint(0,100)
         vites= randint(1,5)
         rpm = randint(1,8)
-        s1=randint(0,100)
-        s2= randint(0,100)
-        s3=randint(0,100)
-        s4=randint(0,100)
+        (s1, s2, s3, s4) = Utku.utku()
 
         
         socketio.emit('my_response',
@@ -143,7 +141,7 @@ if __name__ == '__main__':
     except ValueError:
         PORT = 80
     #Sinif().sinif()
-    #app.run(HOST, PORT)
+#    app.run(HOST, PORT)
     socketio.run(app, debug=True)
 
 
