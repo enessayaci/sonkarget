@@ -27,15 +27,10 @@ def background_thread():
     while True:
         
         socketio.sleep(2)
-        ext = randint(0,100)
-        fr = randint(0,100)
-        kt = randint(0,100)
-        bd = randint(0,100)
-        elec = randint(0,100)
-        hiz = randint(0,100)
+
         vites= randint(1,5)
         rpm = randint(1,8)
-        (s1, s2, s3, s4) = Utku().utku()
+        (s1, s2, s3, s4, ext, fr, kt, bd, elec, hiz) = Utku().utku()
 
         
         socketio.emit('my_response',
