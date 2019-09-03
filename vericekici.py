@@ -17,7 +17,7 @@ def get_vendors():
                                   database = "d6j61pnoq4r9to")
         
         cur = conn.cursor()
-        cur.execute("SELECT sicaklik1, sicaklik2, sicaklik3, sicaklik4 FROM veri ")
+        cur.execute("SELECT sicaklik1, sicaklik2, sicaklik3, sicaklik4, gerilim1, gerilim2, gerilim3, gerilim4, batarya, hiz FROM veri ")
         print("Bulunan satir ", cur.rowcount)
         row = cur.fetchone()
     
