@@ -17,6 +17,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 import requests		
 from random import randint
+from vericekici import Utku
 
 async_mode = None
 socketio = SocketIO(app, async_mode=async_mode)
