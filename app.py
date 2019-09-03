@@ -35,10 +35,7 @@ def background_thread():
         hiz = randint(0,100)
         vites= randint(1,5)
         rpm = randint(1,8)
-        s1=randint(0,100)
-        s2= randint(0,100)
-        s3=randint(0,100)
-        s4=randint(0,100)
+	(s1, s2, s3, s4) = Utku().utku()
 
         
         socketio.emit('my_response',
