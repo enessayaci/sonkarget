@@ -38,8 +38,8 @@ def get_vendors():
     finally:
         if conn is not None:
             conn.close()
-get_vendors()
+    return sicaklik1,sicaklik2,sicaklik3,sicaklik4
 class Utku:
     def utku(self):
         (self.sicaklik1, self.sicaklik2, self.sicaklik3,self.sicaklik4) = get_vendors()
-        return (self.sicaklik1, self.sicaklik2, self.sicaklik3,self.sicaklik4s)
+        return (self.sicaklik1, self.sicaklik2, self.sicaklik3,self.sicaklik4)
