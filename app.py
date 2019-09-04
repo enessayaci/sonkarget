@@ -5,13 +5,12 @@ CoDeR= Furkan Ceran
 """
 #-------iMPORTLAR---------------------------------------------------------------------------------------------------
 import time
-import os                       # Sistem dosyalarina erisim icin import ettigim saf python modulu
-import random					# crawl sisteminde her seferinde farkli sonuclar alabilmek adina
+import os
+import random
 from os import environ
-import sys						# bunu flaskda web sitesini olustururken encode hatasinin cozumu olarak importladim.
-import urllib					# Html sitelerimizden veri ceken bir modul
-from flask import Flask, redirect, render_template, request, url_for # tum projenin internette calismasini saglayan modul
-		# Bu Flask icin gerekli __init__ verilerini almaya yariyor
+import sys
+import urllib
+from flask import Flask, redirect, render_template, request, url_for
 from flask_socketio import SocketIO, emit
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -22,7 +21,6 @@ async_mode = None
 socketio = SocketIO(app, async_mode=async_mode)
 thread = None
 def background_thread():
-    """Example of how to send server generated events to clients."""
     ext=fr=kt=bd=elec=0
     while True:
         
@@ -43,34 +41,31 @@ def background_thread():
 #--------------------DECODE--------------------------------------------------------------------------------------#
 ##################################################################################################################
 
-						# Flaskta UTF8 Olmayan sonuclarda server kapanmasin diye decoce edip sistemi yeniden 
-#sys.setdefaultencoding('utf8')  #baslatmaya yariyan kisim
-#reload(sys)
-##################################################################################################################
-#--------------------/App.Route ve Html'e Gidecekler\------------------------------------------------------------#
-##################################################################################################################
-@app.route("/")										   # Burada app.route ile html sayfasina yonlendirme yapiyoruz
-def index():										   # Anasayfayi tanimladim
+@app.route("/")
+def index():
     return render_template("index.html")
-@app.route("/navi", methods=['GET', 'POST'])										   # Burada app.route ile html sayfasina yonlendirme yapiyoruz
-def navigation():										   # Anasayfayi tanimladim
+@app.route("/navi", methods=['GET', 'POST'])
+def navigation():
     return render_template("navigation.html")
 @app.route("/message", methods=['GET', 'POST'])	
-def message():										   # Anasayfayi tanimladim
+def message():
     return render_template("chat.html")
-@app.route("/about")								   # Hakkimda sayfasi icin yonlendirme..
-def about():										   # Hakkimda sayfasini tanimladim
-        return render_template("about.html")		   # render template ile html dosyami python serverime attim
-@app.route("/advise")								   # advise tavsite sayfasi yonlendirmesi..
-def advise():										   # advise tavsiye sayfasini tanimladim
-        return render_template("suggestions.html")	   # render template ile html dosyami python serverime attim
+@app.route("/about")
+def about():
+        return render_template("about.html")
+@app.route("/advise")
+def advise():
+        return render_template("suggestions.html")
+@app.route("/sifremiunuttum", methods=['GET', 'POST'])
+def sifremiunuttum():
+    return render_template("sifremiunuttum.html")
 @app.errorhandler(404)
-def page_not_found(e):								   # Burada 404 hatasi cikarsa diye bir sayfa olusturdum
+def page_not_found(e):
     return render_template('404.html'), 404
-@app.errorhandler(500)								   # Burada server hatasi cikarsa 404 e yonlendirdim
+@app.errorhandler(500)
 def server_error(e):
 	return render_template('404.html'), 500
-						   # advise tavsite sayfasi yonlendirmesi..
+
 
 mesg = 'we are here...'
 
@@ -121,8 +116,8 @@ def search():										   # arama sayfasi tanimladim
                 if request.form["actions"] == "message":
                         return redirect(url_for('message'))                    
                     
-        elif request.form["action"] == "luck":        
-            return render_template("aks.html")
+                if request.form["sifermiunuttumm"] == "sifermiunuttum":
+                            return redirect(url_for('sifermiunuttum'))
 					# eski sekmede diger sonuclari listelettim
                 
 
