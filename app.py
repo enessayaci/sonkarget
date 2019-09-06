@@ -10,8 +10,9 @@ import random
 from os import environ
 import sys
 import urllib
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, url_for,flash
 from flask_socketio import SocketIO, emit
+import json
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 import requests		
@@ -59,6 +60,15 @@ def advise():
 @app.route("/sifremiunuttum", methods=['GET', 'POST'])
 def sifremiunuttum():
     return render_template("sifremiunuttum.html")
+@app.route("/grafik", methods=['GET', 'POST'])
+def grafik():
+        from grafikyazar import Ceran
+        datam = Ceran().ceran()
+        json.dumps(datam)
+        
+        
+
+        return render_template("grafik.html",datam = datam)
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -109,7 +119,9 @@ def search():										   # arama sayfasi tanimladim
                         }
                         return render_template('aks.html', async_mode=socketio.async_mode, **templateData, user = user)
                     else:
-                        print ("Hatali giris")
+                        flash("Kullanıcı Adı veya Şifreniz Hatalı") 
+                        return redirect(request.url)
+                        
                 if request.form["action"] == "navi":           
                         return redirect(url_for('navi'))
      
@@ -118,6 +130,10 @@ def search():										   # arama sayfasi tanimladim
                     
                 if request.form["sifermiunuttumm"] == "sifermiunuttum":
                             return redirect(url_for('sifermiunuttum'))
+                if request.form["grafikk"] == "grafik":
+ 
+                            return redirect(url_for('grafik'))
+
 					# eski sekmede diger sonuclari listelettim
                 
 
