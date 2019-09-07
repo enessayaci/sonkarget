@@ -63,12 +63,18 @@ def sifremiunuttum():
 @app.route("/grafik", methods=['GET', 'POST'])
 def grafik():
         from grafikyazar import Ceran
-        datam = Ceran().ceran()
-        json.dumps(datam)
-        
-        
+        (sicaklik,gerilim,batarya,hiz) = Ceran().ceran()
+        json.dumps(sicaklik)
+        json.dumps(gerilim)
+        json.dumps(batarya)
+        json.dumps(hiz)
 
-        return render_template("grafik.html",datam = datam)
+        return render_template("grafik.html",sicaklik = sicaklik, gerilim = gerilim,batarya = batarya,hiz = hiz)
+@app.route("/log", methods=['GET', 'POST'])
+def log():
+        from logcekici import Logs
+        (Logs) = Logs().log()
+        return render_template("loglariizle.html",Logs=Logs)
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -133,6 +139,9 @@ def search():										   # arama sayfasi tanimladim
                 if request.form["grafikk"] == "grafik":
  
                             return redirect(url_for('grafik'))
+                if request.form["logg"] == "log":
+     
+                            return redirect(url_for('log'))
 
 					# eski sekmede diger sonuclari listelettim
                 

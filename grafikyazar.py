@@ -3,26 +3,42 @@
 import psycopg2
 from psycopg2 import Error
 
-
+#a = [[1,2,3],[2,3,4],[4,5,6]]
+#i = 0
+#for a in range(a):
+#   i +=1
+#   dic[sicaklik].append([i,a[0][:3]])
+#   dic[gerilim].append([i,[a[0][3:7]]])
+#   a.pop(0)
 data=[]
-
 def verilendin(tumveri):
     sayac=0
     a=0
+    dic = {"sicaklik":[],"gerilim":[],"batarya":[],"hiz":[]}
     while sayac is not 60:
             try:
                 temp=list(tumveri[a])
-                temp.insert(0,sayac+1)
-                data.append(temp)
-                #print(data)
+                sicaklik = temp[:4]
+                gerilim = temp[4:8]
+                batarya = [temp[8]]
+                hiz = [temp[9]]
+                sicaklik.insert(0,sayac+1)
+                gerilim.insert(0,sayac+1)
+                batarya.insert(0,sayac+1)
+                hiz.insert(0,sayac+1)
+                dic["sicaklik"].append(sicaklik)
+                dic["gerilim"].append(gerilim)
+                dic["batarya"].append(batarya)
+                dic["hiz"].append(hiz)
+                #print(dic["sicaklik"])
                 a=a+10
                 sayac=sayac+1
                 
                 
             except:
-                return data
+                return dic
 
-    return data
+    return dic
 def sicaklik(datam):
     for i in datam:
         i.pop()
@@ -58,13 +74,16 @@ def get_vendors():
         cur.execute("SELECT sicaklik1, sicaklik2, sicaklik3, sicaklik4, gerilim1, gerilim2, gerilim3, gerilim4, batarya, hiz FROM veri ")
         print("Bulunan satir ", cur.rowcount)
         tumveri = cur.fetchall()
-        #print(tumveri)
+        #print(tumveri,"------")
         yedekdata=[]
-        data=verilendin(tumveri)
-        yedekdata=data
+        dic=verilendin(tumveri)
+        gerilim = dic["gerilim"]
+        sicaklik= dic["sicaklik"]
+        batarya = dic["batarya"]
+        hiz=dic["hiz"]
         #gerilims=gerilim(data)
-      
-        datam=sicaklik(yedekdata)
+        #print(sicaklik)
+        #datam=sicaklik(yedekdata)
         
         
 
@@ -78,8 +97,8 @@ def get_vendors():
         #print("5")
         if conn is not None:
             conn.close()
-    return datam
+    return sicaklik,gerilim,batarya,hiz
 class Ceran:
     def ceran(self):
-        (self.datam) = get_vendors()
-        return (self.datam)
+        (self.sicaklik,self.gerilim,self.batarya,self.hiz) = get_vendors()
+        return (self.sicaklik,self.gerilim,self.batarya,self.hiz)
