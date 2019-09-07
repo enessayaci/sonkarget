@@ -23,10 +23,11 @@ def get_vendors():
         
         cur = conn.cursor()
         cur.execute("SELECT sicaklik1, sicaklik2, sicaklik3, sicaklik4, gerilim1, gerilim2, gerilim3, gerilim4, batarya, hiz FROM veri ")
-        tumveri = cur.fetchall()
-        for i in tumveri:
-            temp=list(tumveri[i])
-            data.append(temp)
+        veri = cur.fetchone()
+        while veri != None:
+            data.append(list(veri))
+            veri = cur.fetchone()
+            
         
         
         
