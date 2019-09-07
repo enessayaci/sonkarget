@@ -303,17 +303,36 @@
 	<h3 class="adp_head">Kayıt Arşivi</h3>
 	<div class="col-sm-30">
     <center>
-{%for i in {{Logs}}%} 
-  
-<li>{{Logs[i]}}</li> 
-{%endfor%} 
-<table class="tablom" border="1">
-{% for i  in Logs  %}
-			
+
+<table class="tablom" border="3">
+    <tr>
+    <th>Sıcaklık 1</th>
+    <th>Sıcaklık 2</th> 
+    <th>Sıcaklık 3</th>
+    <th>Sıcaklık 4</th>
+    <th>Gerilim 1</th> 
+    <th>Gerilim 2</th>
+    <th>Gerilim 3</th> 
+    <th>Gerilim 4</th>
+    <th>Batarya</th> 
+    <th>Hız</th>
+  </tr>
+{% for i  in Loglar  %}
+
+    <tr>
+    <td>{{i[0]}}</td>
+    <td>{{i[1]}}</td> 
+    <td>{{i[2]}}</td>
+    <td>{{i[3]}}</td>
+    <td>{{i[4]}}</td> 
+    <td>{{i[5]}}</td>
+    <td>{{i[6]}}</td>
+    <td>{{i[7]}}</td> 
+    <td>{{i[8]}}</td>
+    <td>{{i[9]}}</td>
+  </tr>
    
-      <tr>
-				 <td>{{i[0]}}{{i[1]}}{{i[2]}}{{i[3]}}{{i[4]}}{{i[5]}}{{i[6]}}{{i[7]}}{{i[8]}}{{i[9]}}</td>
-			</tr>
+
 {% endfor %}
 
        

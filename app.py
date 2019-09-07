@@ -73,8 +73,8 @@ def grafik():
 @app.route("/log", methods=['GET', 'POST'])
 def log():
         from logcekici import Logs
-        (Logs) = Logs().log()
-        return render_template("loglariizle.html",Logs=Logs)
+        Loglar = Logs().log()
+        return render_template("loglariizle.html",Loglar = Loglar)
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
