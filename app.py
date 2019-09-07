@@ -141,7 +141,7 @@ def search():										   # arama sayfasi tanimladim
                             return redirect(url_for('grafik'))
                 if request.form["logg"] == "log":
      
-                            return redirect(url_for('log'))
+                            return redirect(url_for('loglariizle'))
 
 					# eski sekmede diger sonuclari listelettim
                 
