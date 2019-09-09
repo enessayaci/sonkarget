@@ -54,6 +54,9 @@ def message():
 @app.route("/about")
 def about():
         return render_template("about.html")
+@app.route("/exit", methods=['GET', 'POST'])
+def exit():
+        return render_template("index.html")
 @app.route("/advise")
 def advise():
         return render_template("suggestions.html")
@@ -105,7 +108,29 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
     else:
         a = str(json)
         print (a)
-        
+        import psycopg2
+        from psycopg2 import Error
+        try:
+            connection = psycopg2.connect(user = "vfrhjnyxtlicam",
+                                          password = "5bd15794ceeeccce46189ba66b458d30d50c66627e29ea52e220bb3a8c7904ad",
+                                          host = "ec2-107-20-230-70.compute-1.amazonaws.com",
+                                          port = "5432",
+                                          database = "d6j61pnoq4r9to")
+            isim=None
+            mesaj=None
+            cursor = connection.cursor()
+            
+            postgres_insert_query = """ INSERT INTO iletisim (isim,mesaj) VALUES (%s,%s)"""
+
+            print ("mesaj gonderme basarili")
+            record_to_insert = (isim,mesaj)
+            cursor.execute(postgres_insert_query, record_to_insert)
+            connection.commit()
+            count = cursor.rowcount
+            
+        except (Exception, psycopg2.Error) as error :
+            if(connection):
+                print("Failed to insert record into veri table", error)
     
 
 
@@ -142,6 +167,8 @@ def search():										   # arama sayfasi tanimladim
                 if request.form["logg"] == "log":
      
                             return redirect(url_for('loglariizle'))
+                if request.form["exitt"] == "cikis_yap":
+                            return redirect(url_for('index'))
 
 					# eski sekmede diger sonuclari listelettim
                 
